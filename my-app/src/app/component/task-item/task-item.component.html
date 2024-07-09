@@ -1,0 +1,19 @@
+<div [ngClass]="{ 'reminder': taskitem.reminder }" 
+(dblclick)="onToggle(taskitem)" 
+class="task">
+  <h3>
+    {{ taskitem.text }}
+    <fa-icon 
+      (click)="onDelete(taskitem)" 
+      
+      [icon]="faTimes"
+      [ngStyle]="{ 'color': 'red' }">
+    </fa-icon>
+  </h3>
+  <h4>{{ taskitem.day }}</h4>
+  <h5>{{ taskitem.reminder }}</h5>
+</div>
+
+<!-- dblclick => he dblclick event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.
+
+dblclick fires after two click events (and by extension, after two pairs of mousedown and mouseup events).-->

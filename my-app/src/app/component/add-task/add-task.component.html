@@ -1,0 +1,30 @@
+<p style="margin-top: 3px"></p>
+<!-- {{ model | json }} -->
+
+<form *ngIf="showAddtask" class=" add-form" (ngSubmit)="onSubmit()">
+
+  <div class="form-control">
+
+    <label for="text">Task Title</label>
+    <input type="text" name="text" id="text" [(ngModel)]="model.text" placeholder="Add text here">
+
+  </div>
+
+  <!-- Date and TIME -->
+  <div class="form-control">
+
+    <label for="day">Date and Time</label>
+    <input type="datetime-local" name="day" id="day" [(ngModel)]="model.day">
+
+  </div>
+
+  <!-- reminder -->
+  <div class="form-control form-control-check">
+
+    <label for="reminder">reminder</label>
+    <input type="checkbox" name="reminder" [(ngModel)]="model.reminder" id="reminder">
+
+  </div>
+
+  <input type="submit" value="Save Task" class="btn btn-block">
+</form>

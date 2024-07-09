@@ -1,0 +1,12 @@
+<!-- <h3 *ngFor="this is  th e task list">{{taskData.text}}</h3>
+
+
+
+<h3 *ngFor="let task of taskData">{{ task.text }}</h3> -->
+
+<app-add-task (onaddTask)="taskAdded($event)"></app-add-task>
+<!-- $event is a special variable that holds the event data emitted by the onaddTask event. -->
+<h2 style="border-bottom: 3px solid black; margin-bottom: 5px;">Task List</h2>
+
+<app-task-item *ngFor="let task of taskData" [taskitem]="task" (onDeleteTask)="deleteTask(task)"
+  (onToggleReminder)="ToggleReminder(task)"></app-task-item>
